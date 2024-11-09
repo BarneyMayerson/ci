@@ -27,7 +27,7 @@ jobs:
       - name: Push Changes Back to Repo
         run: |
           git config user.name "gh-actions"
-          git confog user.email "gh@email.com"
+          git config user.email "gh@email.com"
           git add .
           git commit -m "Laravel Pint"
           git push
