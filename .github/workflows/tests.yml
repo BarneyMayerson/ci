@@ -3,7 +3,7 @@ name: Tests
 on: pull_request
 
 jobs:
-  eun-tests:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
