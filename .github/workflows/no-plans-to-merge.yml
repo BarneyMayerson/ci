@@ -8,6 +8,7 @@ on:
 jobs:
   no-plans-to-merge:
     runs-on: ubuntu-22.04
+    if: github.event.pull_request.merged == false
 
     steps:
       - name: Create a comment on the PR
