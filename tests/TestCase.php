@@ -10,6 +10,7 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
+        // THis should turn off the Vite
         $this->withoutVite();
     }
 }
