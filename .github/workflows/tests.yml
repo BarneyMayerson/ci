@@ -6,17 +6,14 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
 
-    env:
-      PHP_VERSION: "8.3"
-      PHP_EXTENSIONS: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, gd, redis, igbinary, msgpack, lzf, zstd, lz4, memcached, gmp
-      CACHE_KEY: php-extension-cache-v1
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4.2.2
 
       - name: Setup
         uses: ./.github/actions/setup
+        with:
+          php-version: "8.3"
 
       - name: Install Project Dependencies
         run: composer install -q --no-interaction
